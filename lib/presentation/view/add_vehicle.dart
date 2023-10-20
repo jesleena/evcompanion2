@@ -1,52 +1,35 @@
+
+import 'package:evcompanion2/presentation/view/added_vehicle/added_container_screen.dart';
+import 'package:evcompanion2/presentation/view/profile/add_vehicle_tile.dart';
+import 'package:evcompanion2/utils/green_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-class AddVehicle extends StatefulWidget {
 
+class AddVehicle extends StatelessWidget {
+  const AddVehicle({super.key});
 
-  @override
-  State<AddVehicle> createState() => _AddVehicleState();
-}
-
-class _AddVehicleState extends State<AddVehicle> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-
-
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-
-              SizedBox(
-                height: 40.h,
-              ),
-
-              Expanded(
-                  child: SingleChildScrollView(
-                    child: Container(
-
-                      child: Column(
-                        children: [
-                          Text( "Add Vehicle",style: TextStyle(fontWeight:FontWeight.bold,fontSize: 40), ),
-
-
-
-                        ],
-                      ),
-                    ),
-                  )
-              ),
-
-            ],
-          ),
+    return Scaffold(
+      appBar: AppBar(title: Text('Add Vehicle details'),leading: Icon(Icons.arrow_back_ios),
+      backgroundColor: Colors.transparent,),
+      body: 
+      Padding(
+        padding: const EdgeInsets.all(18.0),
+        child: Column(
+          children: [SizedBox(height: 35,),
+          Text("             Choose how your machine \n           is connected to the Carsana Secur...",style: TextStyle(fontWeight: FontWeight.bold),),
+         
+          SizedBox(height: 15,),
+          AddVehicleContainer(text: "Select vehicle"),
+          SizedBox(height: 15,),
+          AddVehicleContainer(text: "Select model"),
+          SizedBox(height: 15,),
+          AddVehicleContainer(text: "Select trip"),
+          SizedBox(height: 300,),
+          GreenElevatedButton(text: "Add vehicle", onPressed: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => SelectedVehicleScreen(),)),)
+          ],
         ),
       ),
     );
-
   }
 }

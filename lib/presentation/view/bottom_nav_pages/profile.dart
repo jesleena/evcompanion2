@@ -1,13 +1,16 @@
+import 'package:evcompanion2/presentation/view/booking_review/booking_review_page.dart';
+import 'package:evcompanion2/presentation/view/login_screen.dart';
+import 'package:evcompanion2/presentation/view/my_booking/my_booking.dart';
+import 'package:evcompanion2/presentation/view/profile/my_booking.dart';
+import 'package:evcompanion2/presentation/view/profile/my_favourite.dart';
+import 'package:evcompanion2/presentation/view/profile/my_profile.dart';
+import 'package:evcompanion2/presentation/view/profile/my_vehicle.dart';
+import 'package:evcompanion2/presentation/view/profile/my_vehicle/my_vehicle.dart';
+import 'package:evcompanion2/presentation/view/profile/terms_conditions.dart';
+import 'package:evcompanion2/presentation/widgets/cardWidget1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:evcompanion2/presentation/widgets/cardWidget1.dart';
-import 'package:evcompanion2/presentation/view/profile/my_profile.dart';
-import 'package:evcompanion2/presentation/view/profile/my_booking.dart';
-import 'package:evcompanion2/presentation/view/profile/my_favourite.dart';
-import 'package:evcompanion2/presentation/view/profile/terms_conditions.dart';
-import 'package:evcompanion2/presentation/view/profile/my_vehicle.dart';
-import 'package:evcompanion2/presentation/view/login_screen.dart';
 class Profile extends StatefulWidget {
   @override
   State<Profile> createState() => _ProfileState();
@@ -17,16 +20,15 @@ class _ProfileState extends State<Profile> {
 
   final pages = [
     myProfile(),
-    MyVehicle(),
-    MyFavourites(),
-    MyBooking(),
-    Terms_Conditions(),
+    MyVehicleScreen(),
+    MyBookingPage(),
+    TermsAndConditionsScreen(),
     LoginScreen(),
   ];
   var iconName = [
     "profile",
     "My Vehicle",
-    "My Favourite",
+   
     "My Booking",
     "Terms & Conditions",
     "LogOut",
@@ -34,7 +36,7 @@ class _ProfileState extends State<Profile> {
   static const icons = <IconData>[
     Icons.person,
     Icons.car_rental,
-    Icons.favorite,
+    
     Icons.calendar_today_outlined,
     Icons.security_outlined,
     Icons.logout,
