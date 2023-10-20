@@ -16,13 +16,20 @@ class _HomeState extends State<Home> {
 
           children: <Widget>
           [
-            Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/mapview.jpg'),
-                    fit: BoxFit.cover),
+           InteractiveViewer(
+          boundaryMargin: EdgeInsets.all(20.0),
+          minScale: 1.0,
+          maxScale: 2.0, // Adjust the max scale as needed
+          child: Container(
+            
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/kerala.jpeg'),
+                fit: BoxFit.cover,
               ),
             ),
+          ),
+           )
 
           ]
       ),

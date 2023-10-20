@@ -19,7 +19,7 @@ class _RoadMapState extends State<RoadMap> {
             Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/mapview.jpg'),
+                    image: AssetImage('assets/images/kerala.jpeg'),
                     fit: BoxFit.cover),
       ),
     ),

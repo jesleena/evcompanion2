@@ -2,21 +2,17 @@ import 'package:evcompanion2/presentation/widgets/cardWidget2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 class ViewBooking extends StatefulWidget {
-
-
   @override
   State<ViewBooking> createState() => _ViewBookingState();
 }
-
 class _ViewBookingState extends State<ViewBooking> {
  String name='Green Speed Station';
  String price='\$80';
- String image="assets/charging.jpeg";
+ String image="assets/images/charging.jpeg";
  String state='Completed';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,

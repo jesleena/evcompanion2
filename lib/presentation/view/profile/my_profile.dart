@@ -20,7 +20,7 @@ class _myProfileState extends State<myProfile> {
     super.initState();
   }
   void fetchData() async {
-    Preferences = await SharedPreferences.getInstance()!;
+    Preferences = await SharedPreferences.getInstance();
     setState(() {
     tname = Preferences.getString('namekey')!;
     tuname = Preferences.getString('unamekey')!;

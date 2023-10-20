@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:evcompanion2/presentation/view/registration_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'bottom_nav_controller.dart';
 import 'package:evcompanion2/presentation/widgets/mytextfield.dart';
 import 'package:evcompanion2/presentation/widgets/customButtom.dart';
@@ -99,12 +99,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
 
   void validateandLogin() async {
-    Preferences = await SharedPreferences.getInstance()!;
+    Preferences = await SharedPreferences.getInstance();
     String storedusername = Preferences.getString('unamekey')!;
     String storedpassword = Preferences.getString('passkey')!;
     // values that we entered at text field
-    String username = uname_ctrl.text;
-    String password = passwd_ctrl.text;
+    String username = uname_ctrl.text.trim();
+    String password = passwd_ctrl.text.trim();
 
     if (storedusername == username && storedpassword == password) {
       Navigator.of(context).push(MaterialPageRoute(builder: (context) =>BottomNavController()));

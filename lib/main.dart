@@ -1,3 +1,8 @@
+import 'package:evcompanion2/presentation/view/book_slot/book_slot.dart';
+import 'package:evcompanion2/presentation/view/my_booking/my_booking.dart';
+import 'package:evcompanion2/presentation/view/my_booking/widgets/booking_tile.dart';
+import 'package:evcompanion2/presentation/view/profile/my_booking.dart';
+import 'package:evcompanion2/presentation/view/profile/terms_conditions.dart';
 import 'package:evcompanion2/utils/colorConstants.dart';
 import 'package:flutter/material.dart';
 import 'package:evcompanion2/presentation/view/splash_screen.dart';
@@ -11,7 +16,7 @@ void main()  {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -30,7 +35,9 @@ class MyApp extends StatelessWidget {
           ),
           //
 
-          home: SplashScreen(),
+          home: 
+         SplashScreen()
+      
         );
       },
     );

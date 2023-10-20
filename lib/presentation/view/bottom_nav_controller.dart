@@ -1,3 +1,4 @@
+import 'package:evcompanion2/presentation/view/booking_review/booking_review_page.dart';
 import 'package:flutter/material.dart';
 import '../../utils/colorConstants.dart';
 import 'bottom_nav_pages/profile.dart';
@@ -15,7 +16,7 @@ class _BottomNavControllerState extends State<BottomNavController> {
   final _pages = [
     Home(),
     RoadMap(),
-    ViewBooking(),
+    BookingReviewPage(),
     Profile(),
   ];
   var _currentIndex = 0;
@@ -23,10 +24,7 @@ class _BottomNavControllerState extends State<BottomNavController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //appBar: AppBar(
-       // title: Text( "Appname", style: appNameStyle),
-       // centerTitle: true,
-       // ),
+      
       bottomNavigationBar: BottomNavigationBar(
         elevation: 5,
         selectedItemColor: myappColor,
@@ -54,7 +52,7 @@ class _BottomNavControllerState extends State<BottomNavController> {
         onTap: (index) {
           setState(() {
             _currentIndex = index;
-            print(_currentIndex);
+           
           });
         },
       ),

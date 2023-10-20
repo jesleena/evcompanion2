@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               CircleAvatar(
             radius: 70,
-            backgroundImage:AssetImage("assets/evcomp.jpg")
+            backgroundImage:AssetImage("assets/images/evcomp.jpg")
               //backgroundImage:AssetImage("assets/evcomp.jpg")
               ),
 
